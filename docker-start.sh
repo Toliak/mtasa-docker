@@ -1,3 +1,5 @@
+mkdir -p deathmatch modules
+
 docker build --tag mtasa:latest \
              --build-arg GROUP_ID=$(id -g) \
              --build-arg USER_ID=$(id -u) \

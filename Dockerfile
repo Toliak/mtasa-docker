@@ -28,4 +28,4 @@ RUN apt-get -y update && \
 VOLUME /home/mtasa/mods/deathmatch
 VOLUME /home/mtasa/x64/modules
 USER mtasa
-CMD id && ./mta-server64
+CMD ./mta-server64
