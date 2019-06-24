@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  mtasa:
+    build:
+      context: .
+      args:
+        USER_ID: ${USER_ID}
+        GROUP_ID: ${GROUP_ID}
+    ports:
+     - "22003:22003/udp"
+     - "22005:22005"
+     - "2126:22126/udp"
+    volumes:
+     - ./deathmatch:/home/mtasa/mods/deathmatch
+     - ./modules:/home/mtasa/x64/modules
