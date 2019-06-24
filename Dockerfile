@@ -21,9 +21,8 @@ RUN apt-get -y update && \
     apt-get -y purge wget && \
     apt-get -y autoremove && \
     apt-get -y clean && \
-    rm -rf /tmp/ && \
-    rm -rf /var/lib/apt && \
-    rm -rf /var/lib/dpkg
+    rm -rf /tmp/mtasa && \
+    rm -rf /var/lib/apt
 
 VOLUME /home/mtasa/mods/deathmatch
 VOLUME /home/mtasa/x64/modules
