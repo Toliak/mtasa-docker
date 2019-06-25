@@ -2,12 +2,7 @@ FROM debian:9.9-slim
 
 EXPOSE 22003/udp 22005/tcp 22126/udp
 
-ARG GROUP_ID
-ARG USER_ID
-ENV GROUP_ID=1000
-ENV USER_ID=1000
-RUN groupadd -g ${GROUP_ID} mtasa && \
-    useradd -ms /bin/bash mtasa -g ${GROUP_ID} -u ${USER_ID}
+RUN useradd -ms /bin/bash mtasa
 WORKDIR /home/mtasa
 
 RUN apt-get -y update && \
